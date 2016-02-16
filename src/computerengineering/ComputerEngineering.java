@@ -9,15 +9,34 @@ package computerengineering;
  *
  * @author WS15
  */
-public class ComputerEngineering {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        
-        System.out.print("Be like Mike");
-        
+import org.junit.Assert;
+import org.junit.Test;
+
+
+
+/**
+ *
+ * @author Marco Marvin L. Rado
+ */
+public class ComputerEngineering 
+{
+    @Test
+    public void addingTwoNumbers()
+    {
+        ComputerEngineeringPro.add(1,1);
     }
     
+    @Test
+    public void addingTwoNumbersWithSumEquals2()
+    {
+        Assert.assertEquals(2, ComputerEngineeringPro.add(1,1));
+    }
+    
+    @Test
+    public void addingTwoNumbersWithSumEquals3()
+    {
+        Assert.assertEquals(3, ComputerEngineeringPro.add(2,1));
+    }
 }
+
